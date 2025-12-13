@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'provider_state_provider_screen.dart';
 import 'notifier_provider_screen.dart';
 import 'classwork1_provider_screen.dart';
 import 'classwork2_notifier_provider_screen.dart';
-
-final appBarProvider1 = Provider((ref) {
-  return "Dashboard";
-});
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -34,17 +29,12 @@ class DashboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 40),
-                Consumer(
-                  builder: (context, ref, _) {
-                    final appBarTitle = ref.read(appBarProvider1);
-                    return Text(
-                      appBarTitle,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    );
-                  },
+                Text(
+                  'Riverpod',
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
                   'State Management',
