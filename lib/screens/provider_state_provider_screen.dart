@@ -40,6 +40,24 @@ class ProviderStateProviderScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'Provider is used to expose a value, while StateProvider is a specialized provider that allows you to manage and update a simple piece of state.',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(color: Colors.white70),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'State Provider is ideal for managing simple state like counters, toggles, or form inputs, providing a straightforward way to read and update the state.',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(color: Colors.white70),
+                ),
+              ),
               Expanded(
                 child: Center(
                   child: Column(
